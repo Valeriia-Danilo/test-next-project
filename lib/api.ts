@@ -15,9 +15,14 @@ export type NoteListResponse = {
     total: number;
 };
 
-axios.defaults.baseURL =" https://next-docs-9f0504b0a741.herokuapp.com/";
+axios.defaults.baseURL = " https://next-docs-9f0504b0a741.herokuapp.com";
 
 export const getNotes = async () => {
     const res = await axios.get<NoteListResponse>("/notes");
+    return res.data;
+};
+
+export const getOneNote = async (id: string) => {
+    const res = await axios.get<Note>(`/notes/${id}`);
     return res.data;
 };
