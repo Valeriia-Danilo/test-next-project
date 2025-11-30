@@ -1,7 +1,7 @@
 import NoteList from "@/components/NoteList/NoteList";
 import { getNotes } from "@/lib/api";
 
-const Notes = async () => {
+const NotesPage = async () => {
 const res = await getNotes();
     
 
@@ -13,4 +13,4 @@ const res = await getNotes();
 );
 }
 
-export default Notes;
+export default NotesPage;
