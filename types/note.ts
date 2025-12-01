@@ -12,3 +12,11 @@ export type NoteListResponse = {
     notes: Note[];
     total: number;
 };
+
+export type Category = {
+    id: string,
+    name: string,
+    description: string,
+    createdAt: string,
+    updatedAt: string
+};

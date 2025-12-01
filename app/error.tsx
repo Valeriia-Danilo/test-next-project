@@ -17,3 +17,4 @@ const Error = ({ error, reset }: Props) => {
 }
 
 export default Error;
+
