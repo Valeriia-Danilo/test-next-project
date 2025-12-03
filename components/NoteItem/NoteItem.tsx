@@ -1,16 +1,17 @@
-import { Note } from "@/types/note";
-import Link from "next/link";
+import { Note } from '@/types/note';
+import Link from 'next/link';
+import css from './NoteItem.module.css';
 
 type Props = {
-    item: Note;
+  item: Note;
 };
 
 const NoteItem = ({ item }: Props) => {
-    return (
-        <li>
-            <Link href={`/notes/${item.id}`}>{item.title}</Link>
-        </li>
-    );
+  return (
+    <li className={css.item}>
+      <Link href={`/notes/${item.id}`}>{item.title}</Link>
+    </li>
+  );
 };
 
 export default NoteItem;
