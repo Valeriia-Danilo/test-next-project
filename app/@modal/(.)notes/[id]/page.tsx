@@ -1,10 +1,12 @@
 import Modal from '@/components/Modal/Modal';
 import { getOneNote } from '@/lib/api';
 
-type Props = { params: { id: string } };
+type Props = {
+  params: Promise<{ id: string }>;
+};
 
 const NotePreview = async ({ params }: Props) => {
-  const { id } = params;
+  const { id } = await params;
   const note = await getOneNote(id);
 
   return (
