@@ -17,6 +17,27 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `Note: ${note.title}`,
     description: note.content.slice(0, 30),
+    openGrapf: {
+      title: `Note: ${note.title}`,
+      description: note.content.slice(0, 100),
+      url: `https://notehub.com/notes/${id}`,
+      siteName: 'NoteHub',
+      image: [
+        {
+          url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+          width: 1200,
+          hight: 630,
+          alt: note.title,
+        },
+      ],
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${note.title}`,
+      description: note.content.slice(0, 100),
+      images: ['https://ac.goit.global/fullstack/react/og-meta.jpg'],
+    },
   };
 }
 
